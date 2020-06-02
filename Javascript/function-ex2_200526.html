@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <input onkeyup="showText()" type="text" class="form-control" id="input1"> 
+                <!-- 키보드가 떼지는 상황이 발생할때 함수 실행되도록 조건 정의  -->
+                <!-- onkeyup 같은건 event attribute 라서 attribute로 들어갈 수 있음.  -->
+                <!-- 이 event에 관련된 자바스크립트 코드가 있다는 걸 브라우저가 알게해줌  -->
+            </div>
+            <div class="col">
+                
+            </div>
+            <div class="col">
+                <p id="result"></p> 
+                <!-- 결과가 나타나는 id result를 가진 p  -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showText() { //showText 정의 시작
+            var x = document.getElementById("input1").value; // input 1의 값을 변수 x로 선언
+            document.getElementById("result").innerHTML = x; // x의 값을 result id값을 가진 곳에 출력 
+            
+        }
+
+    </script>
+</body>
+</html>

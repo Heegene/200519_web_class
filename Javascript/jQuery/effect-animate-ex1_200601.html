@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+    #div1 {
+        position:relative; 
+        /* 이렇게 div position 값을 변경해야 이동함  */
+    }
+</style>
+<script>
+    $(function() {
+        $("#bt1").click(function(){
+            $("#div1").animate({
+                left: "250px",
+                fontSize: "50px", // Javascript에서는 property를 Camelcase로 적용함 
+                opacity: "0.5", // 각 값들은 , 로 구분함 ;로 적으면 적용 안됨
+                width: "300px"
+            });
+        });
+    });
+    
+</script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div id="div1" class="col">
+                Lorem, ipsum dolor.
+            </div>
+        </div>
+
+        <button id="bt1" class="btn btn-primary">클릭</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* h1 바로 밑에 존재하는 p를 선택할 수 있습니다.  */
+        h1+p {
+            background-color: coral;
+        }
+        /* 바로 밑에 붙어있지는 않더라도, h1 아래에 등장하는 p를 지정하여 사용할 수 있습니다.  */
+        h1~p {
+            font-size:50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- h1>lorem4^p*5>lorem10 -->
+    <h1>Lorem ipsum dolor sit.</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, exercitationem.</p>
+    <p>Enim non sunt doloribus sed, quas eum labore voluptatum beatae?</p>
+    <p>Dolores deleniti cupiditate ullam odio impedit laboriosam laudantium doloribus eaque?</p>
+    <p>Neque earum minus asperiores atque optio alias mollitia nemo nam.</p>
+    <p>Nisi consectetur eaque exercitationem eveniet minima quasi est nulla assumenda!</p>
+    <h1>Lorem ipsum dolor sit.</h1>
+    <p>Lorem ipsum dolor sit.</p>
+</body>
+
+</html>

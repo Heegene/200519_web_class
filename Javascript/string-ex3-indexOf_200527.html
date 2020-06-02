@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+</style>
+</head>
+<body>
+
+    <!-- 입력한 단어가 몇 번째 위치에 존재하는지 인덱싱 해주는 예제 (0부터 자리값 시작) -->
+    <!-- .container>.row*2>.col>input.form-control#input$ -->
+    <div class="container">
+        <div class="row">
+            <div class="col"><input type="text" class="form-control" id="input1"></div> 
+            <!-- input1 값을 입력하는 입력창입니다.  -->
+        </div>
+        
+        <div class="row">
+            <div class="col"><input onkeyup="show()" type="text" class="form-control" id="input2"></div>
+            <!-- input2를 입력하는 입력창이며, 키보드가 손에서 떨어지면 show() 함수를 호출합니다  -->
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1><span id="result">
+                    <!-- 결과를 나타내는 구역입니다  -->
+                </span> 번 인덱스에 있음 </h1>
+                
+            </div>
+
+            <div class="col">
+                <h1><span id="result2">
+                    <!-- 결과를 나타내는 구역입니다  -->
+                </span> 인덱스에 있음 (뒤에) </h1>
+                
+            </div>
+        </div>
+
+    </div>
+<script>
+    function show() {
+        var t1 = document.getElementById("input1").value; // input1값을 .value property로 받아 옵니다. 
+        var t2 = document.getElementById("input2").value; // input2값을 .value property로 받아 옵니다. 
+
+        var i = t1.indexOf(t2); // t1 객체의 indexOf method를 t2 인수로 실행합니다. t1은 string으로 기본 메소드 indexOf를 가짐
+        var j = t1.lastIndexOf(t2); 
+        // t1.indexOf("ㅁㅁㅁ",15) 이런식으로 적으면 앞에서부터 15번째 뒤부터 해당 단어를 찾으라는 것
+        // t1.lastIndexOf("ㅁㅁㅁ",15) 마찬가지로 뒤에서부터 15번째 다음부터 찾으란거
+    
+        document.getElementById("result").innerHTML = i; // result에 i 값을 출력합니다. 
+        document.getElementById("result2").innerHTML = j;
+        
+    }
+    
+
+</script>
+</body>
+</html>

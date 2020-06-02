@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+</style>
+<script>
+    // attribute 값을 받아오는 attr() method
+    $(function(){ // 페이지 로딩이 완료되면 실행되도록 하는 기능
+        let h = $("#link1").attr("href"); //href 라는 attribute의 값을 반환하도록 함
+        console.log(h);
+
+        let i = $("#link1").attr("id");
+        console.log(i);
+
+        let e = $("#link1").attr("class");
+        console.log(e);
+    });
+    
+</script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a id="link1" href="https://www.naver.com" class="btn btn-primary">클릭</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul id="result">
+
+                    
+
+                </ul>
+                <ul id="result2">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+<script>
+    // 6개의 랜덤한 값 추출
+    var res = ""; // res 값 초기화
+
+
+    var i = 0; // i값 초기화 
+    while (i < 6) { // 0,1,2,3,4,5 6번 반복 
+        var n = Math.floor(Math.random() * 45+1);
+        res += "<li>" + n + "</li>";
+        i++;
+
+    }
+    document.getElementById("result").innerHTML = res;
+
+    var res2 = "";
+
+    var i = 0;
+    while (i < 6 ) {
+        var n = Math.floor(Math.random() * 50+50); // 0~49.999까지의 숫자가 나오고 50을 더해서 99.99까지의 숫자가 나옴
+        res2 += "<li>" + n + "</li>";
+        i++;
+    }
+    document.getElementById("result2").innerHTML = res2;
+
+
+</script>
+</body>
+</html>

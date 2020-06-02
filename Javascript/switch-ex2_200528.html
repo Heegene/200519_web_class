@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+</style>
+</head>
+<body>
+    <!-- 학점을 선택해서 점수가 나오도록 하는 계산기  -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <input onkeyup="check()" type="text" class="form-control" id="input1">
+            </div>
+            <div class="col">
+                <h1 id="result"></h1>
+            </div>
+        </div>
+    </div>
+<script>
+    function check() {
+        let x = document.getElementById("input1").value;
+        let result="";
+        let y = x.toUpperCase();
+
+        
+
+        switch (y) {
+            case "A":
+                result = "90점 이상";
+                break; // case문마다 해당되는것만 실행하고 종료되도록 함
+            case "B":
+                result = "80점 이상";
+                break;
+            case "C":
+                result = "70점 이상";
+                break;
+            case "D":
+                result = "60점 이상";
+                break;
+            case "F": 
+                result = "60점 미만";
+                break;
+            default: 
+                result = "점수를 정확히 입력하세요.";
+                break;
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+</style>
+</head>
+<body>
+<script>
+    var x = "some text";
+    var y = {
+        age: 50,
+        len: 70
+    }
+
+    console.log(y.age);
+    console.log(x.length); // length라는 property를 작성해 준 적이 없지만 string이 객체처럼 되어 있어
+    // string 자체의 method 가능 reference 가서 
+    
+    //indexof
+    var str = "Please locate where 'locate' occurs!";
+    var pos = str.indexOf("locate");
+    console.log(pos);
+
+    //slice
+    str = "apple, banana, kiwi";//위에 var str 이미 선언되었으므로 굳이 선언할 필요 없음 
+    var res = str.slice(7,13);
+    console.log(res); // 이러면 banana 출력
+
+    res = str.slice(0,5);
+    console.log(res); // apple이 출력됨 
+
+    res = str.slice(-4); // 마지막까지 출력하고 싶은 경우는 두번째 parameter를 생략하면 됨. kiwi 출력됨 
+    console.log(res);
+    
+    res = str.substring(7);
+    console.log(res); // 7부터 끝까지 
+
+    // substr
+    res = str.substr(7,6); // 7부터 6까지가 아니라 7부터 6개. 약간 엑셀 MID 함수같음 
+    console.log(res);
+
+    res = str.substr(7); // 이러면 7부터 끝까지 출력됨 
+    console.log(res);
+
+    res = str.substr(-4); //-4부터 끝까지
+    console.log(res); // kiwi 출력
+
+    //replace
+    str = "Please visit Microsoft and Microsoft!"; 
+    res = str.replace("Microsoft", "W3Schools");
+    console.log(res); // 이 경우 plz visit w3schools and microsoft 출력
+
+    res = str.replace("MICROSOFT", "W3Schools");
+    console.log(res); // 이 경우 MICROSOFT 존재하지 않다고 판단하여(대소문자) 원문 그대로 출력 
+    
+    // toUpperCase, toLowerCase
+
+    var text1 = "Hello World!";
+    console.log(text1.toUpperCase()); // HELLO WORLD! 출력
+    console.log(text1.toLowerCase()); // hello world! 출력 
+
+    text1 = "              Hello World!          "
+    console.log(text1);
+    console.log(text1.trim()); // 양옆의 공백이 제거된 string이 출력됨 
+
+    //charAt
+    text1 = "Hello World!";
+    console.log(text1.charAt(0)); // 0번에 위치한 글자인 H 반환해줌 6넣으면 w나옴
+    
+
+
+</script>
+</body>
+</html>

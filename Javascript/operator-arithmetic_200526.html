@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+</style>
+</head>
+<body>
+    <script>
+        console.log(3 + 5);
+        console.log(3 - 5);
+        console.log(3 * 5);
+        console.log(3 / 5); // 이렇게 기본적인 연산을 출력할 수 있음
+        
+        console.log(5 ** 2); // 5의 2승
+        console.log (5 % 2); // 5를 2로 나눈 뒤 나머지 modular, remainder 라고 부름 
+        // 이 위에까지가 두개의 항으로 이루어진 이항 연산자이고, ++ 는 항을 하나만 사용하므로 단항연산자
+        
+        var x = 5;
+        x++; // x가 1 증가함 원래 갖고있던 값+1 해서 다시 x로 대입해주는거 / 증가연산자
+        console.log(x);
+
+        x--;
+        console.log(x); // 감소연산자, 갖고있던 값에서 1을 뺌 
+
+        //일반 수학과 마찬가지로 *, /가 +,-보다 우선순위를 가짐.
+
+        console.log(100+50*3);
+        console.log((100+50) *3); // 괄호는 사칙연산기호를 우선하여 적용 
+
+        console.log("x" + "yy"); // 연산이 숫자가 아닌 텍스트로 적용될 경우 연결된 결과가 나옴 결과값 xyy
+        console.log("3"+"4"); // 결과가 34 가 나옴 
+        console.log(3 + "4"); // 피연산자 양싸이드에 하나라도 string(텍스트)이면 둘 다 string 처리되어서 34가 나옴
+        console.log("3" - "4"); // 근데 빼기 곱하기 나누기 이런건 number로 처리되어서 나옴 
+        console.log("3" * "4"); //  둘중에 하나라도 string이면 string으로 처리되는건 더하기에서만 그렇고 -,*,/는 숫자변환
+        console.log("3" / "4"); // 
+        
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+    <!-- jQuery library -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+    <!-- Latest compiled JavaScript -->
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+    <!-- fontawesome script -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+    <style>
+    </style>
+    <script>
+
+        $(document).ready(function(){
+          //  $("#button1").click(); // 문서 로드가 완료되면 자동으로 클릭시키는 액션 
+            $("button").click(function(){
+                //혹은 버튼이 클릭되었을 때의 함수를 파라미터로 지정할 수도 있음
+                alert("버튼2번");
+            });
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <button onclick="alert('버튼1번')" class="btn" id="button1">클릭</button>
+    <button class="btn" id="button2">클릭</button>
+</body>
+
+</html>

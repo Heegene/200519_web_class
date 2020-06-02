@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+    <!-- jQuery library -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+    <!-- Latest compiled JavaScript -->
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+    <!-- fontawesome script -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+    <style>
+        #mini {
+            font-size: 30px; 
+            /* 견종구분을 위해 버튼을 작게 조정 */
+        }
+
+        #small {
+            font-size: 60px;
+            /* 견종구분을 위해 버튼을 중간 사이즈로  */
+        }
+
+        #large {
+            font-size: 100px;
+            /* 견종구분을 위해 버튼을 큰 사이즈로  */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- 유저의 버튼 선택란  -->
+        <button onclick="dogFight(0)"> <i id="mini" class="fas fa-dog"></i> </button><br>
+        <button onclick="dogFight(1)"> <i id="small" class="fas fa-dog"></i></button><br>
+        <button onclick="dogFight(2)"> <i id="large" class="fas fa-dog"></i></button><br>
+        <!-- 클릭하면 dogfight 함수를 호출하되 각각의 버튼이 0,1,2 인수를 넣고 함수를 돌립니다  -->
+    </div>
+
+    <div class="container">
+        <h1 class="text-center">VS</h1>
+    </div>
+
+    <div class="container">
+        <!-- 컴퓨터가 입력한 부분 출력하는 공간  -->
+        <!-- <button type=button id="btn-com">
+    
+        </button> -->
+
+        <h1 id="btn-com">
+            <!-- 컴퓨터가 받아낸 랜덤숫자에 맞는 강아지 사진이 출력됩니다.  -->
+        </h1>
+    </div>
+
+    <div class="container">
+        <h1 id="result"> 
+            <!-- 승부 결과를 출력할 부분입니다.  -->
+
+        </h1>
+    </div>
+
+
+    <script>
+        function dogFight(u) { // dogfight의 함수 정의(u값 받아서 돌림)
+            var user = u; // 유저로부터 입력값을 받을 것이므로 user = u; 로 정의
+            var comp = dogComputer(); //dogComputer의 결과값을 comp에 대입
+
+            var result = ""; 
+
+            if (user == comp) { 
+                result = "비겼습니다.";
+            } else if (user == 0 && comp == 1) {
+                result = "졌습니다.";
+            } else if (user == 1 && comp == 2) {
+                result = "졌습니다.";
+            } else if (user == 2 && comp == 0) {
+                result = "졌습니다.";
+            } else {
+                result = "이겼습니다.";
+            }
+            console.log(user);
+            console.log(comp);
+
+            document.getElementById("result").innerHTML = result; // result의 결과를 "result" 아이디를 가진 항목에 출력 
+        }
+
+        function dogComputer() { // dogcomputer 함수 정의 
+            var r = Math.floor(Math.random() * 3); // 랜덤으로 0~2.99 사이 숫자 출력하고 소숫점자리 버림
+    
+            var content = "";
+            if (r == 0) {
+                content = "<img src='dog1.jpg'>"; // r값이 0인 경우 강아지 1번사진을 대입
+            } else if (r == 1) {
+                content = "<img src='dog2.jpg'>"; // r값이 1인경우 강아지 2번사진을 대입
+            } else if (r == 2) {
+                content = "<img src='dog3.jpg'>"; // r값이 2인 경우 강아지 3번사진을 content 대입
+            }
+            document.getElementById("btn-com").innerHTML = content; // 컴퓨터가 선택한 랜덤숫자응 if 조건에 맞게 그림 출력하도록 btn-com 에 넣음
+
+            return r;
+        }
+
+      
+
+    </script>
+</body>
+
+</html>

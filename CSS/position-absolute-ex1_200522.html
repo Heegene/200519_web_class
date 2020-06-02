@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            position: relative;
+
+            background-color: firebrick;
+            color: wheat;
+            height: 100px;
+            font-size: 50px;
+            width: 200px;
+
+        }
+        #sub {
+            /* 정상적인 배치흐름에서 빠지게하기위해 absolute 줌 처음엔 안보여야하니까 
+             \그리고 안보이게하기위해  display none 처리 */
+            position: absolute;
+            display: none;
+            width: 200px;
+            background-color: lightpink;
+            color: wheat;
+            /* 
+            아래로 내려가는 메뉴화면이 아니라 옆으로 나오는 메뉴화면으로 하고 싶으면
+            위치를 위로 올리고 오른쪽으로 아래와 같이 이동시켜 만들 수 있음 
+            left:200px;
+            top:0px;
+             */
+
+        }
+
+    /* 마우스를 올렸을 때 sub 항목이 안 보이는 상태에서 보이는 상태로 전환되도록 표시 */
+        #main:hover #sub {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        MAIN
+        <div id="sub">
+            <div>sub</div>
+            <div>sub</div>
+            <div>sub</div>
+        </div>
+    </div>
+    <p>Lorem ipsum dolor sit. Lorem ipsum dolor sit.</p>
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome의 로고를 사용하기 위해 스크립트 소스를 지정합니다.  -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"> </script>
+
+    <title>Document</title>
+    <style>
+        /* 부모 설정 */
+        .container {
+            display: flex;
+            height: 200px;
+            align-items: flex-start;
+            justify-content: space-evenly;
+        }
+
+        /* 자식 element 설정 */
+        .item {
+            flex-basis: 100px;
+        }
+
+        #item1 {
+            /* item1의 너비 결정 */
+            flex-basis: 200px;
+        }
+
+        #item2 {
+            /* flex-grow를 적용하여 남은 공간을 어떤 아이템이 어떤 비율로 가져갈지 결정 */
+            flex-grow: 1;
+        }
+
+        #item3 {
+            flex-grow: 1;
+        }
+
+        #nav {
+            /* display:flex; 적용을 해야만 align-item 과 같은 속성을 적용할 수 있음  */
+            display: flex;
+            height: 75px;
+            background-color: gray;
+            color: white;
+
+        }
+
+        #dummy {
+            flex: 1;
+        }
+
+        .menu-item {
+            font-size: 28px;
+            padding: 5px 15px;
+            /* 하단의 align items center 적용을 위해 display flex 타입 설정 */
+            display: flex;
+            /* 텍스트 및 아이콘 정렬도 가운데로 하나하나 해 줄 필요 없이  */
+            align-items: center;
+
+        }
+        /* 커서를 올렸을 때 dummy는 해당되지 않도록 :NOT() 연산자를 사용하여 제외시킴  */
+        .menu-item:NOT(#dummy):hover {
+            background-color: black;
+        }
+
+        #item1 {
+            background-color: blue;
+        }
+
+        #item2 {
+            background-color: brown;
+
+        }
+
+        #item3 {
+            background-color: yellow;
+        }
+
+        #item4 {
+            background-color: cyan;
+        }
+
+        #item5 {
+            background-color: silver;
+        }
+
+        .content-main-container {
+            display: flex;
+            /* 이렇게 해서 container 안에 있는 3개의 element를 flex 처리
+            container를 꼭 div가 아니어도 상관없음  안에거도 마찬가지 */
+
+        }
+
+        .side-menu {
+            flex-basis: 200px;
+            /* side menu랑 ad는 크기차지를 주지않기위해 절대값 부여 */
+            background-color: #ababab;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .ad {
+            flex-basis: 200px;
+            background-color: #dddddd
+        }
+
+        .main-content {
+            flex: 1;
+        }
+
+        /* content main container 안의 div들에 전체 패딩을 줌  */
+        .content-main-container>div {
+            padding: 10px 20px;
+        }
+
+        table,tr,th,td {
+            border: 1px solid gray;
+            border-collapse:collapse;
+        }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item" id="item1">1</div>
+        <div class="item" id="item2">2</div>
+        <div class="item" id="item3">3</div>
+        <div class="item" id="item4">4</div>
+        <div class="item" id="item5">5</div>
+    </div>
+
+    <!-- .item*3>{콩아지$} -->
+
+
+    <!-- #nav>.menu-item#item$@6*7 아이템 생성-->
+
+    <div id="nav">
+        <div class="menu-item" id="item6"><i class="fas fa-bars"></i></div>
+        <div class="menu-item" id="item7"><i class="fas fa-home"></i></div>
+        <div class="menu-item" id="item8">HTML</div>
+        <div class="menu-item" id="item9">CSS</div>
+        <div class="menu-item" id="dummy"></div>
+
+        <div class="menu-item" id="item10"><i class="fas fa-caret-down"></i></div>
+        <div class="menu-item" id="item11"><i class="fas fa-adjust"></i></div>
+        <div class="menu-item" id="item12"><i class="fas fa-search"></i></div>
+    </div>
+
+    <div class="content-main-container">
+        <!-- .side-menu+.main-content+.ad -->
+        <div class="side-menu">
+            <!-- .side-menu-item*30>lorem1 -->
+            <div class="side-menu-item">Lorem.</div>
+            <div class="side-menu-item">Ab?</div>
+            <div class="side-menu-item">Quia.</div>
+            <div class="side-menu-item">Iste.</div>
+            <div class="side-menu-item">Aspernatur.</div>
+            <div class="side-menu-item">Consequatur!</div>
+            <div class="side-menu-item">Rerum!</div>
+            <div class="side-menu-item">Voluptates.</div>
+            <div class="side-menu-item">Ipsam.</div>
+            <div class="side-menu-item">Tempore.</div>
+            <div class="side-menu-item">Explicabo?</div>
+            <div class="side-menu-item">Possimus.</div>
+            <div class="side-menu-item">Repellendus.</div>
+            <div class="side-menu-item">Consequatur!</div>
+            <div class="side-menu-item">Ducimus!</div>
+            <div class="side-menu-item">Rem.</div>
+            <div class="side-menu-item">Esse.</div>
+            <div class="side-menu-item">Odio.</div>
+            <div class="side-menu-item">Praesentium.</div>
+            <div class="side-menu-item">Numquam!</div>
+            <div class="side-menu-item">Vero?</div>
+            <div class="side-menu-item">Dolore.</div>
+            <div class="side-menu-item">Doloremque!</div>
+            <div class="side-menu-item">Dolore!</div>
+            <div class="side-menu-item">Reprehenderit.</div>
+            <div class="side-menu-item">Dignissimos.</div>
+            <div class="side-menu-item">Doloribus!</div>
+            <div class="side-menu-item">Iure.</div>
+            <div class="side-menu-item">Quas!</div>
+            <div class="side-menu-item">Iusto?</div>
+
+        </div>
+           
+        <div class="main-content">
+
+            <!-- (h1>lorem3^p>lorem)*7 -->
+            <h1>Lorem, ipsum dolor.</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus cumque ipsa voluptas odit delectus
+                possimus, soluta ullam aliquam architecto quae dignissimos explicabo, ad, neque assumenda corporis unde!
+                Libero, id molestias?</p>
+            <h1>Eos, sequi explicabo.</h1>
+            <p>Voluptas consectetur doloremque eius reiciendis! Assumenda iste saepe error! Nisi modi nulla animi
+                provident libero a debitis ratione vero. Nobis, nostrum. Laboriosam ipsam voluptates asperiores delectus
+                tenetur vel enim blanditiis.</p>
+            <h1>Placeat, id dicta.</h1>
+            <p>Est, suscipit tempora. Velit quae dolores obcaecati unde incidunt nisi id voluptates ex, voluptatibus
+                aliquam expedita possimus pariatur asperiores voluptatem temporibus quidem dolore nostrum repellendus
+                minima nobis rem inventore commodi.</p>
+            <h1>Deleniti, qui excepturi.</h1>
+            <p>Magni accusamus quos, non rem earum quasi soluta quo nulla? Incidunt placeat sed aliquam quasi, dolorem
+                nulla, architecto laborum praesentium harum quae quas. Rerum neque esse labore praesentium nostrum
+                possimus.</p>
+            <h1>Labore, culpa itaque.</h1>
+            <p>Obcaecati, minus reprehenderit. Eos veniam voluptas earum iusto unde saepe? Ut modi debitis unde laborum
+                officiis! Exercitationem odio numquam atque dignissimos aut sunt, doloribus sed, rem corrupti dicta
+                tenetur facilis?</p>
+            <h1>Ad, dolor dignissimos.</h1>
+            <p>Dolore voluptatem eligendi, error eius nam libero possimus. Adipisci nemo numquam soluta enim rerum eius
+                assumenda. Nemo voluptatibus quis aliquam recusandae sed temporibus. Aut officiis sed atque debitis quis
+                molestias.</p>
+            <h1>Aspernatur, repellendus non.</h1>
+            <p>Vitae et dolore aperiam dolorum quas atque debitis quasi dolorem expedita dignissimos necessitatibus
+                quaerat, minus neque, sapiente possimus. Ab, quia maiores. Voluptatibus aut cumque omnis blanditiis nam
+                accusamus maxime incidunt.</p>
+
+
+        </div>
+        <div style="text-align:center" class="ad"><img title="face genius" width="200px" src="../콩이프로필.jpg"><br> 얼굴맛집       
+        <table style="text-align:center">
+            <tr>
+                <th>이름</th>
+                <th>나이</th>
+                <th>출신</th>
+            </tr>
+            <tr>
+                <td>이콩이</td>
+                <td>1.5세</td>
+                <td>충북</td>
+            </tr>
+
+          
+        </table>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

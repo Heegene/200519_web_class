@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    .special {
+        background-color: olive;
+        font-size: 20;
+        color: wheat;
+    }
+    .note {
+        
+        text-decoration: underline;
+        text-decoration-color: teal; /* 앞서 underline으로 정의된 text decoration의 색상 지정 */
+        color: red; /* 왜 이거 순서 바꾸면 안되는건지,,*/
+        
+    }
+    .city {
+        background-color: tan;
+    }
+    .main {
+        color:blue;
+    }
+    
+</style>
+</head>
+<body>
+    <h1 class="special">Lorem, ipsum dolor.</h1>
+    <h1>Labore, ratione commodi.</h1>
+    <h1 class="special">Excepturi, ipsam unde!</h1>
+
+    <h1>Lorem <span class="special">ipsum dolor</span> sit amet.</h1>
+    <p>Lorem ipsum dolor sit, <span class="note">amet consectetur</span> adipisicing elit. Placeat, voluptas.</p>
+
+    <h1 class="city main">Lorem, ipsum.</h1>
+    <h1 class="city">Lorem, ipsum dolor.</h1>
+    <h1 class="city lorem4"></h1>
+    <h1 class="city main">Lorem ipsum dolor sit.</h1>\ <!-- 클래스가 city main으로 설정되어 있음 city, main 둘 다 적용됨 -->
+
+<!-- h1*2>lorem2+p*2>lorem2 -->
+
+<h1>
+    Lorem, ipsum.
+    <p>Lorem, ipsum.</p>
+    <p>Adipisci, id?</p>
+</h1>
+<h1>
+    Itaque, vel.
+    <p>Fuga, doloribus?</p>
+    <p>Nulla, rem!</p>
+</h1>
+
+<!-- h1*2>lorem2^p*2>lorem2 -->
+<h1>Lorem, ipsum.</h1>
+<h1>Dicta, nobis!</h1>
+<p>Lorem, ipsum.</p>
+<p>Provident, nisi.</p>
+
+
+
+</body>
+</html>
+
+

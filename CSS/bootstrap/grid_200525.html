@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <style>
+        .col-1:nth-child(even) {
+            backgroud-color: gold;
+        }
+
+        .col-1:nth-child(odd) {
+            background-color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+</body>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-2">Lorem.</div>
+        <div class="col-1">Optio!</div>
+        <div class="col-1">Architecto.</div>
+        <div class="col-1">Deleniti!</div>
+        <div class="col-1">Perspiciatis.</div>
+        <div class="col-1">Error.</div>
+        <div class="col-1">Explicabo.</div>
+        <div class="col-1">Odit.</div>
+        <div class="col-1">Necessitatibus!</div>
+        <div class="col-1">Eius!</div>
+        <div class="col-1">Laborum?</div>
+        <div class="col-1">Reprehenderit.</div>
+    </div>
+</div>
+
+<!-- 아래와 같이 입력하면 한 행이 반반씩 나뉘게 됩니다(가상의 column 6개씩 차지 ) -->
+<div class="row">
+    <div class="col-6" style="background-color:blue;">Lorem.</div>
+    <div class="col-6">Dicta.</div>
+</div>
+
+<!-- 아래와 같이 입력하면 한 행이 2:8:2의 비율로 나뉘어 나타나게 됩니다.  -->
+<div class="row">
+    <div class="col-2" style="background-color:yellow">Lorem.</div>
+    <div class="col-8">Lorem.</div>
+    <div class="col-2">Lorem.</div>
+</div>
+<div class="col-8">
+    <h1>Lorem, ipsum dolor.</h1>
+    <p>Lorem.</p>
+    <h1>Provident, aspernatur soluta!</h1>
+    <p>Consequatur?</p>
+    <h1>Laborum, corrupti excepturi!</h1>
+    <p>Eveniet.</p>
+    <h1>Voluptatum, qui sunt!</h1>
+    <p>Non.</p>
+    <h1>Commodi, quidem rerum?</h1>
+    <p>Quisquam.</p>
+    <h1>Voluptatem, minus labore.</h1>
+    <p>Unde.</p>
+    <h1>Voluptas, iste doloribus?</h1>
+    <p>Quibusdam!</p>
+    <h1>Voluptatem, vel fuga?</h1>
+    <p>Aut.</p>
+    <h1>Natus, quam atque.</h1>
+    <p>Debitis!</p>
+    <h1>Totam, magni assumenda?</h1>
+    <p>Dicta!</p>
+</div>
+
+
+<!-- .row>.col-2>lorem1^.col-10 -->
+
+<hr>
+
+<!-- 아래와 같이 작성하면 화면이 먼저 2:10으로 나뉘고,
+나뉜 부분 중 10이 다시 12개의 column으로 나눠집니다.  -->
+<div class="row">
+    <div class="col-2">Lorem.
+    </div>
+
+    <div class="col-10">
+        <div class="row">
+            <div class="col-1">Lorem.</div>
+            <div class="col-1">Sint.</div>
+            <div class="col-1">Exercitationem.</div>
+            <div class="col-1">Nisi.</div>
+            <div class="col-1">Blanditiis.</div>
+            <div class="col-1">Odit!</div>
+            <div class="col-1">Alias.</div>
+            <div class="col-1">Magni.</div>
+            <div class="col-1">Consequuntur!</div>
+            <div class="col-1">Repellat?</div>
+            <div class="col-1">Iusto!</div>
+            <div class="col-1">Cumque!</div>
+        </div>
+
+
+    </div>
+    <!-- .row>.col-1*12>lorem1 -->
+</div>
+
+</html>

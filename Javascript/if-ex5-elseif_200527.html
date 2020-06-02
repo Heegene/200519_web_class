@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+    <!-- jQuery library -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+    <!-- Latest compiled JavaScript -->
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+    <!-- fontawesome script -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <script>
+
+        console.log(1);
+
+        if (false) { // if가 true면 if codeblock이 실행되고 바로 console.log4로 넘어감
+
+            console.log(2); // false일 때는 else if의 흐름으로 넘어감
+        } else if (false) { // else if 이면 다음 조건을 확인해서 true이면 3 실행하고
+            console.log(3); // else if의 조건도 false 이면 둘다 실행에 실패하고 4로 넘어감
+
+        }   else if (false) { // else if는 여러개를 수행할 수 있음. 얘까지도 false면 4로 넘어감 
+            console.log(5);
+            
+
+        } else { // 마지막에 else는 있어도 되고 없어도 됨  모두 false일때 else가 실행됨 
+            console.log("싹다 false일때")
+        }
+
+        console.log(4);
+        console.log(6);
+
+
+    </script>
+</body>
+
+</html>

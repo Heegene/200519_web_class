@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+</style>
+<script>
+    // 자손을 찾는 method 
+    $(function () {
+        $("#con1").find(".card-body").addClass("bg-warning"); // find는 parameter로 selector를 받음 
+        // 자손 중에 card-body 라고 기재된 것만 찾음
+        $("#con1").children().addClass("text-light"); 
+        // 자손 말고 자식 element를 찾는 건 children method
+
+        // 자손 모두를 선택하기 위해서는
+        $("#con1").find("*").addClass("px-3");
+        // con1 기준으로 모든 자손들에게 padding을 주는 서식이 적용됨 
+
+    });
+    
+</script>
+</head>
+<body>
+    <div class="container" id="con1">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">Lorem, ipsum dolor.</div> 
+                    <!-- card-body 에 서식이 적용됨   -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

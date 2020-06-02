@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+    <!-- jQuery library -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+    <!-- Latest compiled JavaScript -->
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+    <!-- fontawesome script -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container">
+        <div class="row">
+            <input type="text" id="input1">
+        </div>
+        <div class="row">
+            <input onkeyup="show()" type="text" id="input2">
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h1><span id="result">
+                    <!-- 결과를 나타내는 구역입니다  -->
+                    번 인덱스에 있음. 
+                </span></h1>
+            </div>
+        </div> -->
+        
+
+
+
+        <!-- 투표연령 계산 -->
+
+
+        <div class="row">
+            <div class="col">
+                본인의 출생연도를 입력하세요.
+                <input onkeyup="voteage()" type="text" id="input3">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h3 id="result3"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <input type="text" id="input4" onkeyup="check()">
+        </div>
+    </div>
+    <h1> <span id="result4">
+
+    </span></h1>
+
+    <script>
+        // function show() {
+        //     var x = document.getElementById("input1").value;
+        //     var y = document.getElementById("input2").value;
+
+        //     var z = x.indexOf(y);
+        //     document.getElementById("result").innerHTML = z; 
+        // }
+
+        // 투표연령 계산(한국나이)
+        function voteage() {
+            var x = document.getElementById("input3").value;
+
+            var age = 2021 - Number(x);
+            
+            if (isNaN(age)) {
+                age = "숫자를 입력하세요.";
+            } else {
+                
+                
+                age = (age <= Number(18)) ? "너무 어립니다." : "투표가 가능합니다.";
+
+            }
+            document.getElementById("result3").innerHTML = age;
+            
+        }
+
+        function check() {
+
+            var x = document.getElementById("input4").value;
+            var len = x.length;
+
+            if (len <= 5) {
+                result = "5자 미만으로 입력하셨습니다."
+            } else if (len <= 10 ) {
+                result = "5자 초과 10자 미만으로 입력하셨습니다."
+            } else if (len <= 15 ) {
+                result = "10자 초과 15자 미만으로 입력하셨습니다."
+            } else 
+                result = "그만입력하세요;;;;"
+            
+            document.getElementById("result4").innerHTML = result;
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

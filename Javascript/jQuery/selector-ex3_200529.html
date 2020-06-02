@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+    <!-- jQuery library -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+    <!-- Latest compiled JavaScript -->
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+    <!-- fontawesome script -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+    <style>
+    </style>
+    <script>
+        $(document).ready(function () { // 로드되고나서 어떤 함수가 실행되는데 
+            $("button").click(function () { //버튼이 클릭되었을때 어떤 함수가 실행되는 함수임
+                $(".myhead").hide(); //어떤 함수냐면 .myhead 라는 클래스를가진애를 사라지게하는것 
+            });
+
+        }
+        );
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="myhead">Lorem, ipsum dolor.</h1>
+                <h1 class="myhead">Aliquam, quasi officiis.</h1>
+                <h1 class="myhead">Ad, eius facere.</h1>
+                <button class="btn">클릭</button>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+    <!-- jQuery library -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+    <!-- Latest compiled JavaScript -->
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+    <!-- fontawesome script -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="result">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let result = "";
+
+        for (let i = 9; i >= 1; i--) {
+            
+            result += 
+                "2 &times;" + i + " = " + (2 *i) + "<br>";
+            // 2곱하기 1은 2 2 곱하기 2는 4 이런 구문이 div element가 들어가야하는데
+            // 바뀌는 내용은 중간에 곱해주는 수 1,2,3,... 이므로 2 곱하기(특수문자) + 곱하는수 = "result"
+
+        }
+        document.getElementById("result").innerHTML = result; //결과값 출력
+
+    </script>
+</body>
+
+</html>

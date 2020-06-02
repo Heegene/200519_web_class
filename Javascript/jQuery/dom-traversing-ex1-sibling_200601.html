@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+</style>
+<script>
+    $(function () {
+       $("#head5").next().addClass("bg-primary"); // #head6의 배경이 primary 처리됨 
+       $("#head5").prev().addClass("bg-warning"); // #head4의 배경이 warning으로 변경 
+       $("#head5").nextAll().addClass("text-secondary"); // head6~10까지의 글자가 secondary 처리됨 
+       $("#head5").prevAll().addClass("text-info"); // head 1~4까지 글자가 info 처리됨 
+       
+    });
+    
+
+</script>
+</head>
+<body>
+    <!-- 특정 element 기준으로 형제 찾기  -->
+    <h1 id="head1">Lorem, ipsum dolor.</h1>
+    <h1 id="head2">Nulla, alias veritatis!</h1>
+    <h1 id="head3">Voluptatum, hic beatae!</h1>
+    <h1 id="head4">Facere, dolore alias?</h1>
+    <h1 id="head5">Provident, reprehenderit maxime?</h1>
+    <h1 id="head6">Excepturi, dolorum ab.</h1>
+    <h1 id="head7">Eos, error nulla.</h1>
+    <h1 id="head8">Amet, vero iste?</h1>
+    <h1 id="head9">Sint, tempore velit?</h1>
+    <h1 id="head10">Natus, error. Perferendis?</h1>
+</body>
+</html>

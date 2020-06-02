@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+    <!-- jQuery library -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+    <!-- Latest compiled JavaScript -->
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+    <!-- fontawesome script -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+    <style>
+    </style>
+    <script>
+        $(function () {
+            $("#btn1").click(function(){
+                let t = $("#input1").val();
+                let e = $("<div class='card'>").text(t);  //여기서의 <div~>는 element를 추가한 것이므로 </div>는 생략 가능(optional)
+                $("#col2").append(e); // 클릭하면 카드 추가 
+
+                e.click(function () { // 나타난 결과물을 클릭하면 다시 사라지게 하는것
+                    $(this).remove(); 
+                });
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div id="col1" class="col">
+                <div class="input-group">
+                    <input id="input1" type="text" class="form-control">
+                        
+                    <div class="input-group-append">
+                        <button id="btn1" class="btn btn-info"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div id="col2" class="col"></div>
+        </div>
+    </div>
+</body>
+
+</html>

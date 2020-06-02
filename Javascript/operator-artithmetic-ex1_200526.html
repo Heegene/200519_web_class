@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+    <!-- jQuery library -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+    <!-- Latest compiled JavaScript -->
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+    <!-- fontawesome script -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <input type="text" class="form-control" id="input1">
+                 <!-- input1,2라는 id로 입력할 값을 넣는 input 란 생성 -->
+                <input type="text" class="form-control" id="input2">
+            </div>
+
+            <div class="col-4">
+                <button onclick="plus()" class="btn-info btn">
+                    <i class="fas fa-plus"></i>
+                    <!-- 더하기, 빼기, 곱하기 버튼 만들기(아이콘 이용) -->
+                </button>
+                <button onclick="minus()" class="btn-info btn">
+                    <i class="fas fa-minus"></i>
+
+                </button>
+                <button onclick="times()" class="btn-info btn"> 
+                     <!-- onclick했을 때 times() 함수 호출 -->
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="col-4">
+                <h1 id="result">결과</h1> 
+                <!-- result 아이디를 부여하고 결과값 받을 곳 생성 -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function minus() {
+            var x = document.getElementById("input1").value; // 3개의 statement를 code block 으로 묶음 
+            var y = document.getElementById("input2").value; // input 1,2를 불러와 x,y 로 지정
+
+            document.getElementById("result").innerHTML = //  result 아이디를 가진 항목에 x-y 출력
+                x - y;
+                
+        }
+        function times() {
+            var x = document.getElementById("input1").value;
+            var y = document.getElementById("input2").value;
+
+            document.getElementById("result").innerHTML =
+                x * y;
+        }
+        
+        function plus() {
+            
+            var x = document.getElementById("input1").value;
+            var y = document.getElementById("input2").value;
+
+            document.getElementById("result").innerHTML =
+              Number(x) + Number(y); // +의 경우 앞의 "input"을 string으로 받기 때문에 숫자로 다시 전환해 줌 
+            // 혹은 아래의 방법으로도 가능 
+            // var xn= Number(x);
+            // var yn= Number(y);
+            // xn + yn;a
+
+        }
+
+    </script>
+</body>
+
+</html>

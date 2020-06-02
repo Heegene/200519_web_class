@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+</style>
+<script>
+
+    // 어떤 element에 마우스가 들어갈 때 이벤트 발생 mouseenter
+    $(document).ready(function() {
+        $("h1").mouseenter(function() {
+            console.log(this.innerHTML); //마우스가 거기에 올라갔을 때 로그가 남음
+            
+        });
+    });
+
+    
+</script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Lorem, ipsum dolor.</h1>
+                <h1>Vel, dignissimos beatae!</h1>
+                <h1>Blanditiis, in ipsam!</h1>
+                <h1>Corrupti, vel hic?</h1>
+                <h1>Suscipit, voluptas aliquam?</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

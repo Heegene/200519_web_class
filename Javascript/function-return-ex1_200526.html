@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+</style>
+</head>
+<body>
+    
+    <script>
+        function my() { // 함수 정의(정의만으로 호출되진 않음)
+            
+            console.log("1"); 
+            
+            return;
+            console.log("2"); // 이 경우 2는 출력되지 않음 
+            // return 이라는 키워드는 함수의 실행을 종료함 그 뒤의 statement 실행X
+            
+        }
+        my();
+
+
+        function your() {
+            console.log("x");
+            return 3; // your() statement가 끝난 이후에 반환된 값이 3으로 치환된 거나 마찬가지가 됨 
+        }
+
+        your(); // return 3; 에 의해 3으로 치환된 것과 마찬가지가 됨
+        // 그러므로 z에 your()를 넣고 z값 찍어보면 3이라는 것을 알 수 있음 
+        var z = your();
+        console.log(z);
+    </script>
+</body>
+</html>

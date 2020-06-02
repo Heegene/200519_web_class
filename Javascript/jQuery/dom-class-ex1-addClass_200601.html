@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+    <!-- jQuery library -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+    <!-- Latest compiled JavaScript -->
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+    <!-- fontawesome script -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+    <style>
+    </style>
+    <script>
+        // 버튼 클래스 추가하여 버튼모양으로 만드는 예제
+        $(function () {
+            $("#btn1").click(function () {
+                $("a").addClass("btn btn-primary"); // a에 button class를 추가
+            });
+            $("#btn2").click(function () {
+                $("a").removeClass("btn btn-primary btn"); // a에 button class를 삭제/여러가지 삭제는 띄어쓰기로 삭제 가능
+            });
+            $("#btn3").click(function () {
+                $("a").toggleClass("btn btn-primary btn"); // 클래스가 없으면 생성하고 있으면 삭제해줌 
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <button id="btn1" class="btn btn-info">클래스 추가</button>
+
+                <br>
+                <button id="btn2" class="btn btn-danger">클래스 삭제</button> 
+                <br>
+                <button id="btn3" class="btn btn-secondary">클래스 토글</button>
+                <br>
+                <a href="#">다음</a>
+                <a href="#">네이버</a>
+                <a href="#">구글</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

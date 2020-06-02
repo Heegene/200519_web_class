@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+         * { /*asterisk를 기재하면 CSS에서는 '전체 적용'을 의미합니다. */ 
+            text-align:right;
+        }
+        /* .city 클래스를 선택하여 CSS style을 적용하는 방식입니다.  */
+        .city { 
+            color:blueviolet;
+            text-align:center;
+        }
+        
+        .note {
+            background-color:cadetblue;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>Lorem, ipsum dolor.</h1>
+    <h1>Pariatur, nihil ullam!</h1>
+    <!-- 위에서 city, note 에 대한 스타일이 지정되어 있으므로 class가 "city note"로 되어 있으면 양쪽 모두를 적용받게 됩니다. 
+    두 개가 겹치는 경우에 대한 우선순위에 대해서는 200520 class note에 기재되어 있습니다. -->
+    <h1 class="city note">Lorem, ipsum dolor.</h1>
+    <h1 class="city">Voluptatem, unde. Fuga.</h1>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+</style>
+<script>
+    // selector 예제
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("tr:odd").hide();
+            $("tr:nth-child(even)").hide(); // 이렇게도 가능
+            $("tr").odd().hide(); // 이렇게도 사용 가능 
+            // 버튼 누르면 홀수번째 줄이 사라지는데, CSS와는 달리 0번 베이스라서 0,1,2,3... 이렇게 되다보니 생각과는 다름
+            // api documentation 보면 zero-indexed 이=렇게 되어있음 그럼 0부터 센다는거 
+
+        });
+
+    })
+    
+
+</script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button class="btn">클릭</button>
+
+                <table class="table">
+                    <tr>
+                        <td>Lorem.</td>
+                        <td>Eum?</td>
+                        <td>Vitae.</td>
+                        <td>Amet?</td>
+                        <td>Labore.</td>
+                    </tr>
+                    <tr>
+                        <td>Minus!</td>
+                        <td>Ratione.</td>
+                        <td>Ratione.</td>
+                        <td>Ipsa.</td>
+                        <td>Eligendi?</td>
+                    </tr>
+                    <tr>
+                        <td>Optio.</td>
+                        <td>Reiciendis!</td>
+                        <td>Voluptatum.</td>
+                        <td>Cupiditate.</td>
+                        <td>Tempore!</td>
+                    </tr>
+                    <tr>
+                        <td>Cumque.</td>
+                        <td>Dicta!</td>
+                        <td>Ratione.</td>
+                        <td>Modi.</td>
+                        <td>Id.</td>
+                    </tr>
+                    <tr>
+                        <td>Ex.</td>
+                        <td>Repellendus.</td>
+                        <td>Facere.</td>
+                        <td>At?</td>
+                        <td>Optio.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

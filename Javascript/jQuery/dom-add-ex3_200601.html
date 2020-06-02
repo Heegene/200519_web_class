@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+    <!-- jQuery library -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+    <!-- Latest compiled JavaScript -->
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+    <!-- fontawesome script -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+    <style>
+    </style>
+    <script>
+        $(function () {
+            $("#btn1").click(function() {
+                let t = "<h1>new element with text </h1>";
+                $("#head1").after(t); // parameter text로 넣는 방식 
+
+            });
+            $("#btn2").click(function() {
+                let t = $("<h1>").text("new element with jQuery object");
+                $("#head1").after(t); // parameter를 새로운 제이쿼리 객체로 넣는 방식
+
+            });
+            $("#btn3").click(function() {
+                let t = document.createElement("h1");
+                t.innerHTML = "new element with Vanila JS" // 순수 javascript로 넣는 방식 
+               $("#head1").after(t);
+            });
+        });
+
+    </script>
+</head>
+
+<body> 
+    <button id="btn1" class="btn btn-primary"><i class="fas fa-plus"></i></button>
+    <button id="btn2" class="btn btn-primary"><i class="fas fa-plus"></i></button>
+    <button id="btn3" class="btn btn-primary"><i class="fas fa-plus"></i></button>
+
+    <h1 id="head1">Lorem, ipsum dolor.</h1>
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+    <!-- jQuery library -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+    <!-- Latest compiled JavaScript -->
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+    <!-- fontawesome script -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 id="result1"></h1>
+            <h1 id="result2"></h1>
+            <h1 id="result3"></h1>
+            <h1 id="result4"></h1>
+            <h1 id="result5"></h1>
+        </div>
+    </div>
+
+
+    <script>
+        let star1 = "";
+        let space1 = "";
+        for (let line = 0; line < 10; line++) { // 5줄 작성
+            
+            for (let space = 0; space <= line; space++) {
+                star1 += "&nbsp";
+            }
+            
+            // for (let star = 10; star >= line; star--) {
+            //      star1 += "*";
+                 
+            // }
+
+            for (let star = 9; star >= line; star--) {
+                if (star%2 == 1) { //홀수일 때 룰을 적용
+                    star1 += "*"; // 홀수일 때 9
+                    console.log(star1);
+                } else {
+                    star1 += "**";
+                }
+                
+                
+            }
+            star1 += "<br>";
+        
+
+
+        }
+        
+        document.getElementById("result1").innerHTML = star1;
+
+        let star2 = "";
+        let space2 = "";
+        for (let line = 0; line < 10; line++) { // 5줄 작성
+            
+            for (let space = 10; space >= line; space--) {
+                star2 += "&nbsp";
+            }
+            
+            // for (let star = 10; star >= line; star--) {
+            //      star1 += "*";
+                 
+            // }
+
+            for (let star = 0; star <= line; star++) {
+                if (star%2 == 0) {
+                    star2 += "*";
+                } else {
+                    star2 += "**";
+                }
+                
+                
+            }
+            star2 += "<br>";
+        
+
+
+        }
+        
+        document.getElementById("result2").innerHTML = star2;
+
+        
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+</style>
+<script>
+    $(function() {
+        $("#btn1").click(function() {
+            let n = Math.floor(Math.random()*100);
+            $("#head1").before("<h1>new elem"+ n + "</h1>"); // 직전에 새로운 element가 삽입됨
+            
+        });
+        $("#btn2").click(function() {
+            let m = Math.floor(Math.random()*100);
+            $("#head1").after("<h1>new elem"+ m + "</h1>"); // 이후에 새로운 element 가 삽입됨 
+        });
+    });
+    
+</script>
+</head>
+<body>
+    <button id="btn1" class="btn btn-danger"><i class="fas fa-dog"></i></button>
+    <button id="btn2" class="btn btn-info"><i class="fas fa-cat"></i></button>
+    <h1 id="head1">Lorem, ipsum dolor.</h1>
+</body>
+</html>

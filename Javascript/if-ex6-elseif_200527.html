@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+    <!-- jQuery library -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+    <!-- Latest compiled JavaScript -->
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+    <!-- fontawesome script -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <!-- input#input1.form-control[onkeyup] -->
+                <input type="text" id="input1" class="form-control" onkeyup="check()">
+            </div>
+            <div class="col">
+                <h1 id="result"></h1>
+            </div>
+        </div>
+    </div>
+    <script>
+        function check() {
+            var x = document.getElementById("input1").value;
+            var len = x.length;
+
+            var result = "너무 짧습니다." + Number(len) + "자를 입력하였습니다. "; // 텍스트가 9자까지인 경우 default인 너무 짧습니다가 표기됩니다. 
+            if (len >= 20) { // 20자를 넘어가면
+                result = "너무 깁니다."; // 너무 길다는 텍스트가 표기됩니다. 
+            } else if (len >= 10) { // 20글자가 되지 않으면서 10보다 같보다 크다면
+                result = "적당한 길이입니다."; // 적당한 길이라는 텍스트가 출력됩니다. 
+            }
+
+            document.getElementById("result").innerHTML = result; // result id가 있는 h1에 결과를 출력합니다. 
+        }
+    </script>
+</body>
+
+</html>

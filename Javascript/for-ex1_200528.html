@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+</style>
+</head>
+<body>
+<script>
+    console.log(1);
+
+    for(var i = 0; i < 3; i++) { // 반복을 하되 몇 번 반복할지를 () 안에 명시해 주면 됨 
+        // 1번: 초기값
+        // 2번(가운데): 조건
+        // 3번(오른쪽): 증감 
+        // var i = 0 으로 변수선언과 초기화를 한번에 함
+        // i가 어떤조건일때 실행될지 정의함 iㅏ 3보다 작을때 
+        // 그래서 해당 조건이 true일때만 포문 실행됨
+        // 증감이므로 i가 1씩 늘어나도록 i++
+
+        // 순서: 처음에 만나면 1번 statement -> 2번 statement 여기 조건문이 들어가있음 true/false로 boolean이 나뉘는
+        // true/false인지 나뉨 2번이 true일 경우 본문{} 부분이 실행됨 
+        // 그 다음에 실행되는 부분이 본문 안의 statement 가 끝나면 다시 3번으로 감
+        // 3번에서 증가해서 다시 2번으로 넘어감
+        // 2번이 false면 종료됨. for block 자체가 종료되고 그 다음 실행흐름으로 넘어감
+        // 0,1,2 
+        console.log(2);
+    }
+        
+    console.log(3);
+
+</script>
+</body>
+</html>

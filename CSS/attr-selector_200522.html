@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* target 이라는 attribute를 가진 것들을 선택해서 적용할 수 있음  */
+        [target] {
+            font-size: 50px;
+        }
+        /* target attribute의 값이 _self 인 것을 선택  */
+        [target="_self"] {
+            color:red;
+        }
+        /* a라는 element 내에 target이라는 attribute가 있고, 그 값이 _blank 인 것을 지정  */
+        a[target="_blank"] {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <a target="_blank" href="https://www.daum.net">Lorem ipsum dolor sit.</a>
+    <a href="https://www.naver.com:">Obcaecati, rem voluptatibus! Illum.</a>
+    <a target="_self" href="https://www.google.com">Dolorum corrupti placeat ad!</a>
+    
+</body>
+</html>

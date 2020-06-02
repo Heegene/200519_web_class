@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+</style>
+</head>
+<body>
+    
+
+    <script>
+        function my(a) { // 여기서의 a는 parameter
+            console.log("x");  
+            console.log(a);    // 실행시키면 3이 나옴 
+        }    
+        my(3); // 호출부 
+        my(9);
+        my("text"); // 이렇게하면 a는 "text"라는 값을 갖게 됨  여기서의 3,9,text를 argument 라고함 
+
+
+        function your(a,b) { // parameter 꼭 a,b일 필요 없이 car, firstName 이런식으로 가능)
+            console.log(a); // 마찬가지로 car, firstName 등으로 변수명 정의 가능
+            console.log(b);
+        }
+
+        your(2,3) ; // 호출할 때도 parameter 세팅할때와 마찬가지로 2개 순서대로 넣어줌
+        your("Volvo","John"); // 매칭한 대로 입력해 주어야 함 
+        your("Kia", "Kim"); // 함수는 여러 번 호출될 수 있음 
+    </script>
+
+
+</body>
+</html>

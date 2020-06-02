@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+    .container h1 {
+        font-family: monospace;
+    }
+</style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="result5"></h1>
+        <h1 id="result"></h1>
+        <h1 id="result2"></h1>
+        <h1 id="result3"></h1>
+        <h1 id="result4"></h1>
+    </div>
+<script>
+    
+    let res = "";
+
+    for (let i = 0; i <= 5; i++) { // 1~5줄 반복 
+        for (let j = 0; j <= i; j++) { // 별 5개로 시작해서 줄여나감
+            res += "*";
+        }
+        res += "<br>";
+    }
+
+    document.getElementById("result").innerHTML = res;
+
+
+    let res2= ""; // res 초기화 
+    for (let i = 1; i <= 5; i++) { // 1~5줄 반복 
+        for (let j = 5; j >= i; j--) { //i가 0일때 5번, 1일때 4번.. 
+        // 줄수랑 비교해서보면
+        // 0 5
+        // 1 4
+        // 2 3
+        // 1 2
+        // 0 1
+        res2 += "*";
+        }
+        res2 += "<br>";
+        
+    }
+    document.getElementById("result2").innerHTML = res2;
+
+    let res3="";
+
+    for (let i = 0; i <= 5; i++) {
+        for (let j = 5; j >=i; j--) {
+            res3 += "&nbsp;";
+        }
+        for (let j = 0; j <= i; j++) {
+            res3 += "*";
+        }
+        res3 += "<br>";
+
+    }
+    document.getElementById("result3").innerHTML = res3;
+
+    let res4="";
+    for (let i = 0; i <= 5; i++) {
+        for (let j = 0; j <= i; j++) { //공백문자 
+            res4 += "&nbsp;"; 
+        }
+
+        for (let j = 5; j >= i; j--) {
+            res4 += "*";
+        }
+        res4 += "<br>";
+
+    }
+    document.getElementById("result4").innerHTML = res4;
+
+    // 숫자찍기 1의자리만 반복되면서 찍는거
+
+    res5 = "";
+    let t= 0;
+    for (let i = 0; i < 6; i++) {
+        for (var j=0; j<=i; j++) {
+            res5 += t % 10;
+            // t++; 이렇게하면하면 10을 넘어가므로 
+            // 10으로 나눈 나머지를 사용하여 한자리수만 나오게
+            t++;
+        }
+        res5 += "<br>";
+    }
+    document.getElementById("result5").innerHTML = res5;
+    
+</script>
+</body>
+</html>

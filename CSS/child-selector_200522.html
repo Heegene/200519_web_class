@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .desc {
+            background-color:burlywood;
+        }
+        /* direct child가 아니더라도 그 아래에 존재하는 child element를 지정할 때는 스페이스를 사용합니다.  */
+        .parent .desc {
+            font-size: 50px;
+        }
+        /* 바로 인접한 child를 선택하는 경우 연산자 > 를 사용합니다.  */
+        .parent>.desc {
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="parent">
+            <div class="desc">Lorem ipsum dolor sit.</div>
+        </div>
+    </div>
+    <div class="desc">Lorem ipsum dolor sit.</div>
+</body>
+</html>

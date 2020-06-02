@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .desc {
+            background-color:yellow;
+        }
+        /* container 안에 있는 desc 만 지정해 주고 싶을 때는 .선행 selector(**스페이스**)의 자손으로 존재하는 .엘레멘트 지정  */
+        .container .desc {
+            font-size: 50px;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- div element를 감싸고 있는 것 -->
+    <div class="container">
+        <div class="child">
+            <div class="desc">Lorem ipsum dolor sit.</div>
+        </div>
+    </div>
+
+    <!-- div element 단독으로 있는 것  -->
+    <div class="desc">Lorem ipsum dolor sit.</div>
+</body>
+</html>

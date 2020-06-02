@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+</style>
+<script>
+    // 버튼을 누르면 column에 카드로 추가되는 예제 
+    $(function() {
+        $("#btn1").click(function(){
+            let x = $("#input1").val(); // input1 아이디를 가진 element에 입력된 값을 x 변수로 저장
+            let newElem = $("<div class='card'>").text(x);  // card라는 class를 가진 div를 생성하고 거기에 x변수를 텍스트로 넣음
+            $("#col1").append(newElem); // new element를 col1 아이디를 가진 element 맨 뒤에 추가
+        });
+    });
+    
+</script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="input-group">
+                    <input id="input1" type="text" class="form-control">
+                    <div class="input-group-append">
+                        <button id="btn1" class="btn"><i class="fas fa-plus"></i></button>
+                    
+                    </div>
+                </div>
+            </div>
+            <div id="col1" class="col">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

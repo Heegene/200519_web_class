@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+</style>
+</head>
+<body>
+<script>
+    var a = true;
+    var b = false;
+
+    // not 연산자 ! 이건 피연산자를 하나만 받음
+    console.log(!a); // a연산의 반대이므로 false가 출력됨 
+    console.log(!b); // b연산의 반대이므로 true 출력
+
+    // and 연산자 && 양변이 true 일 때만 true
+    console.log(true && true); //true
+    console.log(true && false); //false
+    console.log(false && true); // false
+    console.log(false && false); // false 양 변이 다 true여야 함. 그리고 양변이 boolean type을 받아야 함
+    
+    // or 연산자 || 
+    console.log(true || true); // 양 변이 false 일 때만 false이므로 true 출력
+    console.log(true || false); // true
+    console.log(false || true); // true
+    console.log(false || false); // 얘만 false
+    
+
+</script>
+</body>
+</html>

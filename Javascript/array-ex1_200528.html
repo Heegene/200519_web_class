@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+</style>
+</head>
+<body>
+<script>
+    // array (배열)
+    // []안에 값을 ,로 구분해서 여러 개 넣을 수 있음
+    let i = [0, 1, 2];
+    let e = ["berry", "apple", "banana"];
+    // 값에 해당하는 번호가 생겨남(index)
+    console.log(e[1]); // 이렇게 하면 apple이 출력됨 0,1,2 순서임
+    console.log(e[2]); // 변수[배열index] 로 접근 가능
+
+    //값에 접근할 때 for문을 자주 사용함
+
+    for (let j = 0 ; j < 3; j++) {
+        console.log(e[j]); // 이렇게하면 0,1,2,에 해당하는 배열 내 값 출력됨 
+    }
+
+    i[0] = "kiwi";
+    i[1] = "dragon";
+    i[2] = "lion"; // 이런식으로 변수명[index]로 접근해서 값 변경 가능 
+
+    // 배열에 몇 개의 아이템이 있는지 알고 싶으면 .length property 활용
+    
+    console.log(i.length); // 이렇게 하면 3개의 아이템이 있으므로 3이 출력됨 
+
+
+    
+</script>
+</body>
+</html>

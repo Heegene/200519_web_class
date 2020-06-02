@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+    <!-- jQuery library -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+    <!-- Latest compiled JavaScript -->
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+    <!-- fontawesome script -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <!-- 버튼 3개 생성 -->
+                <!-- 1이면 바위, 0이면 가위, 2면 보 아이콘과 연동  -->
+                <button onclick="rpsGame(1)" class="btn btn-lg btn-block"><i class="fas fa-hand-rock"></i></button>
+                <button onclick="rpsGame(0)" class="btn btn-lg btn-block"><i class="fas fa-hand-scissors"></i></button>
+                <button onclick="rpsGame(2)" class="btn btn-lg btn-block"><i class="fas fa-hand-paper"></i></button>
+
+            </div>
+            <h1 class="text-center">VS</h1> 
+            <!-- 가운데 VS 라는 글자를 배치   -->
+            <div class="col"></div>
+            <div class="col">
+                <!-- 컴퓨터의 가위바위보 결과 출력 -->
+                <button class="btn btn-lg btn-block btn-danger" id="btn-com"></button>
+            </div>
+            <div class="col">
+                <!-- 컴퓨터와 가위바위보한 결과  -->
+                <h1 id="result"></h1>
+                <!--  결과 출력 -->
+            </div>
+        </div>
+    </div>
+    <script>
+        // 가위바위보 프로그램 작성
+
+        function rpsGame(u) {
+            var user = u;
+            var comp = rpsComputer(); 
+            // var user = 0; // rpsUser(); 사용자는 항상 가위를 들고있다고 가정한 상태
+            // var comp = rpsComputer(); // comp가 0,1,2 중 하나의 값을 받아오도록 설정
+
+            var result = ""; // result를 표기하되 아래의 조건을 따른다. 
+            if (user == comp) { // user와 comp()의 리턴값이 같으면 "비겼습니다" 출력
+                result = "비겼습니다.";
+            } else if (user == 0 && comp == 1) { // 비기지 않은 ㅅ아태에서, 유저가 0이고 comp가 1이면 졌습니다 출력
+                result = "졌습니다.";
+            } else if (user == 1 && comp == 2) { // 위의 조건도 만족하지 않는 상태에서 유저가 1 comp가 2면 졌습니다 출력
+                result = "졌습니다.";
+            } else if (user == 2 && comp == 0) { // 위의 조건을 만족하지 않은 상태에서 유저가 2 comp가 0이면 졌습니다 출력
+                result = "졌습니다.";
+            } else {
+                result = "이겼습니다."; // 그 외의 모든 상황에는 이겼습니다 출력 
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+
+        // 컴퓨터가 출력한 부분을 보여주는 기능 
+        function rpsComputer() { // 함수선언
+            var r = Math.floor(Math.random()* 3); // 0,1,2 중 하나의 값이 출력됨
+            console.log(r);  // 0:가위, 1:바위, 2: 보라고 나름의 규칙 정하기
+
+            var content = "";  // content의 값을 출력하되 아래의 값을 따라라 
+            if (r == 0) { // r이 0이면 
+                content = "<i class='fas fa-hand-scissors'></i>"; // 가위 아이콘을 출력
+            } else if (r == 1) { // r이 1인경우 바위 아이콘 출력
+                content = "<i class='fas fa-hand-rock'></i>";
+            } else if (r == 2) { // r이 2인경우 보 아이콘 출력 
+                content = "<i class='fas fa-hand-paper'></i>";
+            }
+        
+        
+        document.getElementById("btn-com").innerHTML = content; // btn-com 이라는 아이디를 가진 (위의 버튼) 에 content 아이콘 출력
+        return r; // return 해줄 수 있는 준비가 되어있음 
+           
+        }
+        rpsComputer();
+
+    </script>
+</body>
+
+</html>

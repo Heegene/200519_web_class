@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+    <!-- jQuery library -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+    <!-- Latest compiled JavaScript -->
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+    <!-- fontawesome script -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <!-- 점수를 넣고 학점을 계산하는 코드 -->
+    <div class="container">
+        <!-- 점수를 입력받는 란 -->
+        <div class="row">
+            <div class="col">
+                <!-- input.form-control#input1[onkeyup] -->
+                <input type="text" class="form-control" id="input1" onkeyup="check()">
+            </div>
+            <div class="col">
+                <!-- 결과출력창  -->
+                <h1><span id="result"></span> 학점입니다. </h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function check() {
+            let x = document.getElementById("input1").value;
+            x = Number(x); // 수로 변환 (string으로 입력받았으므로)
+            let result = ""; // 값을 받는 변수 선언
+            if (90 <= x && x <= 100) {
+                result = "A";
+            } else if (80 <= x && x < 90) {
+                result = "B";
+            } else if (70 <= x && x < 80) {
+                result = "C";
+            } else if (60 <= x && x < 70) {
+                result = "D";
+            } else {
+                result = "F";
+            }
+
+            document.getElementById("result").innerHTML = result;
+        }
+
+
+
+    </script>
+</body>
+
+</html>

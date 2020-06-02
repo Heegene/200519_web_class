@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+</style>
+</head>
+<body>
+<script>
+    임의의 수를 출력하는 random
+    0 <= Math. random() < 1 0과 같거나 0보다 크고 1보다는 작은 수가 페이지 로딩할때마다 나타남
+
+    console.log(Math.random());
+    console.log(Math.random());
+
+    만약 1보다 큰 값(로또번호 등)을 뽑고 싶다면
+    목적이 1 <= r <= 45 라고 한다면
+    math random에 45를 곱하면 . 
+
+    var r = Math.random();
+    console.log(r);
+    r *= 45; // 45를 곱해서 0.0부터 44.999의 숫자가 나오게 됨 45는 넘지않음. 
+    // 여기서 소숫점을 버리면 정수가 됨. 
+    console.log(r);
+    r = Math.round(r); // 반올림해주는 함수
+    console.log(r);
+    r = Math.floor(r); // 소숫점 버리는 함수
+    console.log(r); // 이렇게하면 0~44의 값이 나옴. 여기에 1을 더하면 1~45까지의 값이 나옴
+    r += 1;
+    console.log(r);
+
+    // // 5 <= s <= 10 5부터 10 사이의 값 뽑기
+    var s = Math.random(); // 0부터 1 사이의 값이 나옴
+
+    // 직접 작성해보기 
+    console.log(s);
+    s *= 6; // 0부터 5.9999까지의 숫자가 나옴 / 5개의 숫자범위가 나와야하니까
+    s = Math.floor(s); // 소숫점 버림
+    s += 5; // 5를 더해줌 
+    console.log(s); // 5부터 10사이의 값이 나옴 
+
+
+
+    
+    
+
+
+
+
+</script>
+</body>
+</html>

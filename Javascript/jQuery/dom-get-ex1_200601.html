@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+</style>
+<script>
+    $(function() {
+        $("#head1").click(function() {
+            let x = $("#head1").text(); // 클릭 시 텍스트 정보가 나타남
+            console.log(x);
+
+        });
+        $("#head2").click(function() {
+            let y = $("#head1").html(); // <span></span> 정보까지 나타남 해당 h1 안의 html 태그 포함한 내부 content 모두 가져옴
+            console.log(y);
+            
+        });
+
+        $("#input1").keyup(function() {
+            let z = $(this).val(); // 텍스트를 적고 손을 떼면 input에 넣은 값(value)를 가져와서 console에 출력 
+            console.log(z); 
+            
+        });
+    });
+    
+</script>
+</head>
+<body>
+    <h1 id="head1"><span>Lorem, ipsum dolor.</span></h1>
+    <h1 id="head2"><span>Facere, eaque optio?</span></h1>
+    <h1 id="head3"><span>Quidem, fugiat porro!</span></h1>
+
+    <input type="text" class="form-control" id="input1">
+</body>
+</html>

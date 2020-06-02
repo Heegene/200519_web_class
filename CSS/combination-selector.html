@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p.note{ /* p이면서 note 클래스를 가진 두 가지 조건을 모두 만족한 경우에만 적용됨 p.note 사이 띄어쓰기 X */
+            color: blue;
+        }
+        .note.error {
+            background-color:cyan;
+        }
+        h1.note.error { /* h1 element이면서 note와 error 이라는 클래스를 모두 가진 경우 */
+            text-decoration:line-through;
+        }
+            
+        }
+    </style>
+</head>
+<body>
+    <h1 class="note"> Lorem, ipsum dolor.</h1>
+    <h1 class="note error">Vero, quae officia.</h1>
+    <h1>Est, consequuntur delectus.</h1>
+
+    <p class="note">Lorem ipsum dolor sit amet.</p>
+    <p>Neque ipsa illum saepe quod?</p>
+    <p class="note">월월스 </p>
+    <p id="mypara" class="note"> 야옹</p>
+    <p class="error" style="color:darkseagreen;"> 콩이강아지 </note>
+
+
+     <!-- p -->
+     <p></p>
+
+     <!-- p.note -->
+     <p class="note"></p>
+ 
+     <!-- p.note.error -->
+     <p class="note error"></p>
+ 
+     <!-- p#mypara.note -->
+     <p id="mypara" class="note"></p>
+ 
+     <!-- .note.error -->
+     <div class="note error"></div>
+
+</body>
+</html>

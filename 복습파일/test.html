@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+</style>
+</head>
+<body>
+    <h1>HTML 태그 이름을 이용한 선택</h1>
+    <ul>
+        <li>1 번째 아이템이에요.</li>
+        <li>2 번째 아이템이에요.</li>
+        <li>3 번째 아이템이에요.</li>
+        <li>4 번째 아이템이에요.</li>
+    </ul>
+
+    <p id="date"></p>
+  <button id="oops"> 11111</button>
+
+<script>
+    
+    let test = document.getElementsByTagName("li");
+        for (let i=0; i<test.length; i++) {
+            test.item(i).style.color = "red";
+
+        }
+
+    document.getElementById("date").innerHTML = Date();
+   
+    let click2 = document.getElementById("oops");
+    click2.addEventListener("click",log2);
+
+    function log2 () {
+        console.log("우리갱얼쥐");
+    }
+</script>
+</body>
+</html>

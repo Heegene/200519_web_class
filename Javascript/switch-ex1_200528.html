@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+</style>
+</head>
+<body>
+<script>
+    console.log(1)
+    // switch 문(혹은 switch case 문)은 둥근괄호 안에 있는 값이 case 키워드 다음에 오는 값과 일치하는 것부터 실행
+    switch (2) {
+        case 3: // 2로 변경되면 값이 일치하지 않으므로 실행하지 않고 넘어가서 1,3만 출력됨 
+            console.log(8);
+            break;
+        case 2:
+            console.log(4);
+        //여러 케이스 중 일치하는 것이 없으면 그냥 스킵하고 넘어감
+        //일치하는 게 없을 때 실행되어야 하는 코드가 있다면, default로 설정 가능
+            break;  
+        default:
+            console.log(5);
+            break;
+            // break 키워드가 있으면 해당문부터 실행하지만 다음 실행으로 넘어가지 않고 해당 케이스만 실행하고 끝남 
+
+    }
+
+    console.log(3); 
+
+</script>
+</body>
+</html>

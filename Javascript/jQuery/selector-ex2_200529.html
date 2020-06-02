@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+</style>
+
+<script>
+    // 문서는 body 안쪽에 부가적인 정보는 head 안쪽에 넣는 것이 좋음
+    // 제이쿼리는 일단 헤드에 넣음
+
+    $(document).ready(function () { // document (DOM의 최상위개념)이 로딩이 완료되면 그 안의 함수를 실행 
+        // DOM이 완성된 이후(=페이지가 로드된 이후) 그다음 실행되게 하므로 위치가 head 안에 있어도 상관없게되는것
+        $("button").click(function() { // 모든 버튼 element에 클릭이벤트가 발생하면 아래 함수의 내용이 발생 
+            $("#head1").hide(); //id selector를 달러함수에 넣어서 head1 아이디의 jquery 만들어서 숨기도록 
+
+        })
+
+
+    })
+
+</script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Lorem, ipsum dolor.</h1>
+                <h1 id="head1">Optio, ex soluta?</h1>
+                <h1>Ex, inventore laudantium.</h1>
+
+                <button class="btn">클릭</button>
+
+            </div>
+        </div>
+    </div>
+<script>
+    
+
+
+</script>
+</body>
+</html>

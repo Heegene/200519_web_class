@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>EUR-KRW EXCHANGE</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+    <!-- jQuery library -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+    <!-- Latest compiled JavaScript -->
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+    <!-- fontawesome script -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- 입력창1 -->
+                <div class="col-2"> EUR AMOUNT
+                <input id="input1" type="text">
+            </div>
+
+            <div class="col-2">
+                <!-- 입력창2 -->
+                EXCHANGE RATE
+                <input id="input2" type="text">
+            </div>
+        </div>
+
+
+        <div class="row">
+            <button onclick="exinput()">Calculate</button>
+        </div>
+
+        <div class="row">
+            <p id="result"></p>
+        </div>
+
+    </div>
+
+    <p id="date" script="document.getElementById('date').innerHTML=date()"></p>
+
+    <script>
+        function exinput() {
+            var x = document.getElementById("input1").value;
+            // input1 값을 입력값으로 받습니다. 
+            var y = document.getElementById("input2").value;
+            // input2 값을 입력값으로 받습니다. 
+
+            var z = exrate(x, y);
+            // exrate (x,y);를 z값으로 받습니다. 
+            document.getElementById("result").innerHTML = z;
+            // z값을 result id를 가진 항목에 반영합니다. 
+        }
+
+        function exrate(a, b) {
+            return "원화 금액은" + Number(a) * Number(b) + " 입니다.";
+            // 텍스트 "원화 금액은"과 "입니다" 사이에 a*b 값을 입력합니다. 
+
+        }
+
+       
+     
+    </script>
+</body>
+
+</html>

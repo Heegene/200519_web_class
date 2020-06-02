@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+    <!-- jQuery library -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+    <!-- Latest compiled JavaScript -->
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+    <!-- fontawesome script -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <!-- 제곱한 값을 출력하도록 하는 예제  -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <input onkeyup="exp()" type="text" id="input1" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1 id="result"></h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function exp() {
+            var x = document.getElementById("input1").value; // input1 값 입력
+            
+            var y = exponential(x); // exponential함수를 수행하고 parameter를 input 1로 입력 
+            document.getElementById("result").innerHTML = y; // result에 y의 값을 입력
+
+        }
+        function exponential(a) { // parameter: a이고 a값을 받아서 a*a를 수행한 다음 반환
+            return "제곱한 값은 " + Number(a) * Number(a)  + "입니다.";
+
+        }
+
+    </script>
+</body>
+
+</html>

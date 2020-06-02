@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Latest compiled and minified CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- jQuery library -->
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- Popper JS -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<!-- fontawesome script -->
+<script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+<style>
+</style>
+</head>
+<body>
+<script>
+    var x = 5;
+    b = x == 8; // 이항연산자로 양쪽에 값이 나타날 수 있음 
+    // x는 5인데 == 라고 같냐고 물어봤으니 false가 나올 것
+    console.log(b); // false가 출력됨 
+
+    x == "8"; // 8이라는 string과 비교하게 되면 false가 나옴 값도 다르고 type도 다름
+    console.log(x == "8"); // false
+    console.log(x == "5"); // true 가 나옴. 자료형은 달라도 값 자체는 같아서 true로 나옴 
+
+     /// equal이 3개 있으면 type까지 비교함 
+    console.log(x === "5"); // false ; 값은 같되 type이 다르므로 
+    
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+    <!-- jQuery library -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+    <!-- Latest compiled JavaScript -->
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+    <!-- fontawesome script -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+    <style>
+    </style>
+    <script>
+        $(function () {
+            $("p").on({
+
+                click: function () {
+                    $(this).hide(); //클릭시 사라짐
+                },
+                keypress: function () {
+                    console.log("키가눌렸음");
+                },
+                mouseenter: function () {
+                    console.log("마우스가 올라옴");
+                },
+                mouseleave: function () {
+                    console.log("마우스가 내려감");
+                },
+
+
+            });
+        });
+
+        $(function() {
+
+            $(".btn").click (function() {
+                $("p").toggle();
+                
+            });
+            
+            
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <p>Lorem, ipsum dolor.</p>
+
+    <button><span class="btn">button</span></button>
+</body>
+
+</html>

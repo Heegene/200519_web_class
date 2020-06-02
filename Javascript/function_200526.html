@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+    <!-- jQuery library -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
+    <!-- Latest compiled JavaScript -->
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+    <!-- fontawesome script -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'> </script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <script>
+        console.log("1");
+        console.log("2");
+        console.log("3"); // 1,2,3 이처럼 순서대로 실행됨 
+
+        //만약 특정함수를 나중에 하고싶다면 중괄호로 묶고 function 이라는 키워드 붙이고 이름을 붙임
+        // 
+
+        console.log("1");
+        function my() {
+            console.log("2");
+        }
+        console.log("3");
+        //여기까지만 하고 실행하면 my는 실행되지 않고 1,3만 나타남
+        //함수를 선언할 때는 꼭 function 이라고 선언해 주어야 함
+        //나중에 my는 어떻게 실행하는지??? 코드블럭의 이름과 ()를 넣으면 됨
+
+        my();
+        // 이렇게 입력하고 실행하면 1,3,2 로 실행됨
+        // 함수는 정의해 두면 여러 번 실행시킬 수 있고, 원하는 순서에 넣어서 실행하면 됨 
+
+
+
+
+
+    </script>
+</body>
+
+</html>
